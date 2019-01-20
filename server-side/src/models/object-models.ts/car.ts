@@ -72,4 +72,8 @@ export class Car {
 
         return FareCalculator.calculate(this.m_positionAtHire, this.m_currentPosition);
     }
+
+    public getPosition(): CustomPosition {
+        return this.m_currentPosition;
+    }
 }

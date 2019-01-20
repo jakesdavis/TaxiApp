@@ -1,0 +1,57 @@
+[{
+        "name": "Santa - 101",
+        "type": 0,
+        "driver": {
+            "name": "Mrs. Claus"
+        }
+    },
+    {
+        "name": "Santa - 102",
+        "type": 0,
+        "driver": {
+            "name": "Mr. Claus"
+        }
+    },
+    {
+        "name": "Santa - 103",
+        "type": 0,
+        "driver": {
+            "name": "Evergreen"
+        }
+    },
+    {
+        "name": "Polar - 101",
+        "type": 0,
+        "driver": {
+            "name": "Sugarplum"
+        }
+    },
+    {
+        "name": "Polar - 102",
+        "type": 0,
+        "driver": {
+            "name": "Snowball"
+        }
+    },
+    {
+        "name": "Rudolf - 101",
+        "type": 1,
+        "driver": {
+            "name": "Plum"
+        }
+    },
+    {
+        "name": "Rudolf - 102",
+        "type": 1,
+        "driver": {
+            "name": "Carol"
+        }
+    },
+    {
+        "name": "Rudolf - 103",
+        "type": 1,
+        "driver": {
+            "name": "McJingles"
+        }
+    }
+]

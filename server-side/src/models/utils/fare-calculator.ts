@@ -1,9 +1,12 @@
 import { CustomPosition } from "../object-models.ts/custom-position";
+import { DistanceCalculator } from "./distance-calculator";
 
 export class FareCalculator {
-    private static m_currenySymbol = "₹";
 
-    public static calculate(startPosition: CustomPosition, endPosition: CustomPosition): number {
+    private static m_ratePerKm: number = 2;
+    private static m_ratePerMin: number = 1;
+
+    public static calculate(startPosition: CustomPosition, endPosition: CustomPosition, timeInMinutes: number = 0): number {
         if (startPosition == null) {
             throw new Error("startPosition is empty.");
         }
@@ -11,10 +14,6 @@ export class FareCalculator {
             throw new Error("endPosition is empty.");
         }
 
-        return parseFloat(this.pythagorean((startPosition.latitude - endPosition.latitude, 2), (startPosition.longitude - endPosition.longitude, 2)).toFixed(3));
-    }
-
-    private static pythagorean(a: number, b: number): number {
-        return Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2))
+        return DistanceCalculator.calculate(startPosition, endPosition) * this.m_ratePerKm + timeInMinutes * this.m_ratePerMin;
     }
 } 
